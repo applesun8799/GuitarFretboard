@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你的名字 - 个人网站</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- 导航栏 -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-gray-800">你的名字</a>
+      <div class="space-x-4">
+        <a href="#about" class="hover:text-blue-600">关于我</a>
+        <a href="#projects" class="hover:text-blue-600">项目</a>
+        <a href="#contact" class="hover:text-blue-600">联系</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区 -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-gray-100">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mb-4">你好，我是你的名字</h1>
+      <p class="text-xl text-gray-600 mb-6">一名热爱创造影响力的开发者</p>
+      <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">联系我</a>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">关于我</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        我是一名软件开发者，热衷于构建简洁、高效、用户友好的应用。擅长Web开发，喜欢探索新技术，致力于创造有影响力的解决方案。业余时间，我会探索新创意或参与开源项目。
+      </p>
+    </div>
+  </section>
+
+  <!-- 项目展示 -->
+  <section id="projects" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">我的项目</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 项目卡片 1 -->
+        <div class="project-card bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2">项目一</h3>
+          <p class="text-gray-600 mb-4">使用React和Node.js构建的任务管理Web应用。</p>
+          <a href="#" class="text-blue-600 hover:underline">查看项目</a>
+        </div>
+        <!-- 项目卡片 2 -->
+        <div class="project-card bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2">项目二</h3>
+          <p class="text-gray-600 mb-4">使用Tailwind CSS和JavaScript构建的移动友好型作品集网站。</p>
+          <a href="#" class="text-blue-600 hover:underline">查看项目</a>
+        </div>
+        <!-- 项目卡片 3 -->
+        <div class="project-card bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-2">项目三</h3>
+          <p class="text-gray-600 mb-4">使用Python开发的自动化数据分析开源工具。</p>
+          <a href="#" class="text-blue-600 hover:underline">查看项目</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">联系我</h2>
+      <p class="text-lg text-gray-600 text-center mb-6">有兴趣合作或只是想打个招呼？欢迎联系！</p>
+      <div class="flex justify-center space-x-4">
+        <a href="mailto:你的邮箱@example.com" class="text-blue-600 hover:underline">邮箱</a>
+        <a href="https://github.com/你的用户名" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/你的简介" target="_blank" class="text-blue-600 hover:underline">领英</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>© 2025 你的名字。保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script>
+    // 导航链接平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
