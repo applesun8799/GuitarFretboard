@@ -36,6 +36,9 @@
     @keyframes fadeIn {
       to { opacity: 1; }
     }
+    .video-container video {
+      aspect-ratio: 9 / 16; /* 竖屏比例 */
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-sky-100 to-gray-100 font-sans text-gray-900">
@@ -71,6 +74,19 @@
             <img src="images/3.jpg" alt="产品外观3" class="w-full h-full object-cover">
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频展示 -->
+  <section id="video" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-blue-800">产品介绍视频</h2>
+      <div class="flex justify-center video-container">
+        <video controls class="h-[500px] max-w-md mx-auto rounded-lg shadow-md">
+          <source src="videos/S7362.mp4" type="video/mp4">
+          您的浏览器不支持视频播放。
+        </video>
       </div>
     </div>
   </section>
