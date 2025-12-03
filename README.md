@@ -3,7 +3,6 @@
 解锁吉他指板 是一个帮助吉他爱好者快速掌握指板技巧的小工具。
 
 👉 访问网站: https://applesun8799.github.io/GuitarFretboard/
-      地址2: www.changesway.com
 
 产品宣传
 
